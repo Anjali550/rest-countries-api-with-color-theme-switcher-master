@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --fontsize: 16px;
+}
 body {
   width: 100%;
   min-height: 100vh;
@@ -12,6 +15,7 @@ body {
   --fontcolor: hsl(200, 15%, 8%);
   /* font-family: "Nunito Sans" sans-serif; */
   font-family: "Nunito Sans" , sans-serif;
+  font-size: var(--fontsize);
 }
 .show{
   display: none;
@@ -156,6 +160,7 @@ input[type="text"] {
 }
 .country-info p {
   letter-spacing: 1px;
+  padding:4px 0;
 }
 .country-info p > strong {
   font-weight: 600;
@@ -186,10 +191,7 @@ i {
 }
 .back {
   margin:2rem;
-  /* position: absolute;
-  top: 3rem;
-  left: 30px; */
-  /* background-color: #fdfdfd; */
+ 
   background-color: var(--countrybgcolor);
   box-shadow: 0 0 5px rgba(0, 0, 0.3);
   padding: 10px 20px;
@@ -197,8 +199,7 @@ i {
   border-radius: 5px;
   cursor:pointer;
   color: var(--fontcolor);
-  /* display:none; */
-  /* z-index: -1; */
+
 }
 .leftmodal {
   padding:2rem;
@@ -253,4 +254,99 @@ i {
   background-color: var(--bgcolor);
   width:100vw;
   height:100%;
+}
+@media (max-width: 768px) {
+  .first {
+    flex-direction: column;
+  }
+  .search-country {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .dropdown {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .second {
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first {
+    padding: 15px;
+  }
+  .search-country {
+    margin-bottom: 0.5rem;
+  }
+  .dropdown {
+    margin-top: 0.5rem;
+  }
+  .second {
+    grid-template-columns: 1fr;
+    gap: 20px;
+   
+  }
+ 
+  .country-info {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .country-info p{
+    padding:5px 0;
+  }
+  .country-info h1 {
+    font-size: 20px;
+  }
+  .countries {
+    width: 80vw;
+    height:100%;
+  }
+  .drop {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  
+    margin-top: 0.5rem;
+    padding: 17px 17px;
+    width: 47%;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: var(--countrybgcolor);
+    color: var(--fontcolor);
+  
+    z-index: 1;
+  }
+  header {
+    width: 100%;
+    padding: 25px 5px;
+  }
+  header h1{
+    font-size: 29px;
+  }
+  .toggle {
+    font-size: 13px;
+  }
+  .dropdown {
+    width: 50%;
+  }
+  .modal{
+    display: flex;
+    flex-direction: column;
+    width:90vw;
+  }
+  .leftmodal {
+    padding:1rem;
+    width: 100%;
+  }
+  .leftmodal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .rightmodal {
+    width: 100%;
+    padding:1rem;
+  }
 }
