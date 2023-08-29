@@ -1,3 +1,4 @@
+/* @import url("https://fonts.google.com/specimen/Nunito+Sans"); */
 @import url("https://fonts.google.com/specimen/Nunito+Sans");
 * {
   margin: 0;
@@ -9,7 +10,11 @@ body {
   min-height: 100vh;
   --bgcolor: hsl(0, 0%, 98%);
   --fontcolor: hsl(200, 15%, 8%);
-  font-family: "Nunito Sans" sans-serif;
+  /* font-family: "Nunito Sans" sans-serif; */
+  font-family: "Nunito Sans" , sans-serif;
+}
+.show{
+  display: none;
 }
 /* ---------------loader------------------ */
 #loader{
@@ -36,8 +41,9 @@ header {
   padding: 25px 35px;
   display: flex;
   justify-content: space-between;
-
+  font-family: "sans-serif";
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  background-color: var(--countrybgcolor);
 }
 button {
   outline: none;
@@ -116,14 +122,15 @@ input[type="text"] {
 
   overflow: hidden;
   background-color: var(--countrybgcolor);
-  z-index: -1;
+  /* z-index: -1; */
   height: 100%;
-  width: 100%;
+  width: 20vw;
+ 
 }
 .second {
   display: grid;
   grid-template-columns: repeat(4, auto);
-
+  justify-items: center;
   width: 93vw;
   gap: 45px;
   margin: 1.5rem auto;
@@ -175,20 +182,26 @@ i {
   height: 100%;
   width: 100%;
   flex-wrap: wrap;
+  /* background-color: var(--countrybgcolor); */
 }
 .back {
-  position: absolute;
+  margin:2rem;
+  /* position: absolute;
   top: 3rem;
-  left: 30px;
-  background-color: #fdfdfd;
+  left: 30px; */
+  /* background-color: #fdfdfd; */
+  background-color: var(--countrybgcolor);
   box-shadow: 0 0 5px rgba(0, 0, 0.3);
   padding: 10px 20px;
   letter-spacing: 1px;
   border-radius: 5px;
-  display:none;
+  cursor:pointer;
+  color: var(--fontcolor);
+  /* display:none; */
   /* z-index: -1; */
 }
 .leftmodal {
+  padding:2rem;
   width: 50%;
 }
 .leftmodal img {
@@ -198,7 +211,7 @@ i {
 }
 .rightmodal {
   width: 50%;
-  padding: 2rem;
+  padding:1rem;
 }
 .modalflex {
   display: flex;
@@ -225,4 +238,19 @@ i {
   letter-spacing: 1px;
   font-size: 18px;
   font-weight: 200;
+}
+.notFound{
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  font-weight: 400;
+}
+.countrymodal{
+  background-color: var(--bgcolor);
+  width:100vw;
+  height:100%;
 }
