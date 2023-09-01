@@ -87,6 +87,9 @@ input[type="text"] {
   border: 0;
   background-color: var(--countrybgcolor);
 }
+input.search{
+  color:var(--fontcolor);
+}
 .dropdown {
   display: flex;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
@@ -115,6 +118,10 @@ input[type="text"] {
   color: var(--fontcolor);
 
   z-index: 1;
+}
+.drop p:hover{
+  border: 2px dotted rgb(137, 135, 135) ;
+  background-color: var(--bgcolor);
 }
 /* ------------------------------------
 ------------countries-------------
@@ -291,6 +298,7 @@ i {
  
   .country-info {
     width: 100%;
+    height:50%;
     padding: 2rem 1rem;
   }
   .country-info p{
@@ -313,10 +321,8 @@ i {
     cursor: pointer;
     display: none;
     position: absolute;
-    background-color: var(--countrybgcolor);
-    color: var(--fontcolor);
-  
-    z-index: 1;
+   
+   
   }
   header {
     width: 100%;
